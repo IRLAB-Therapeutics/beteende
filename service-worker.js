@@ -42,8 +42,8 @@ self.addEventListener("fetch", (evt) => {
         fetch(evt.request).catch(() => {
             return caches.open(CACHE_NAME).then((cache) => {
                 let curl = evt.request.url.replace(/https?:\/\/[^/]*/, "");
-                if (curl === "/beteende/") {
-                    curl = "/beteende/index.html"
+                if (curl[curl.length - 1] === "/") {
+                    curl += "index.html"
                 }
                 return cache.match(curl);
             });

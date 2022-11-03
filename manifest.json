@@ -1,7 +1,13 @@
 {
     "name": "IRLAB Beteende",
     "short_name": "IRLAB Beteende",
-    "icons": [],
-    "start_url": "/beteende/index.html",
+    "icons": [
+        {
+            "src": "IRLAB_beteende_180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        }
+    ],
+    "start_url": "/beteende/runner.html",
     "display": "standalone"
 }
